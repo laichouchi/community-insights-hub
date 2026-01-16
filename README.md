@@ -1,73 +1,85 @@
-# Welcome to your Lovable project
+# 🌍 COMMUNITY-INSIGHTS-HUB
 
-## Project info
+> **Unlock Community Insights, Drive Sustainable Change**
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+![last commit](https://img.shields.io/github/last-commit/laichouchi/community-insights-hub?style=flat-square)
+![TypeScript](https://img.shields.io/badge/TypeScript-95%25-blue?style=flat-square)
+![Languages](https://img.shields.io/github/languages/count/laichouchi/community-insights-hub?style=flat-square)
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 📌 Overview
 
-**Use Lovable**
+**Community Insights Hub** is a modern web platform designed to collect, analyze, and visualize community-related data.  
+Its goal is to help organizations, researchers, and communities make **data-driven decisions** that promote sustainable and inclusive development.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🚀 Features
 
-**Use your preferred IDE**
+- 📊 Community data collection & insights
+- 🧠 Structured data validation
+- ⚡ Fast and lightweight frontend
+- 🧩 Modular and scalable architecture
+- 🎨 Clean and modern UI
+- 🛠 Developer-friendly tooling
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🧰 Built With
 
-Follow these steps:
+Built using modern tools and technologies:
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- **React**
+- **TypeScript**
+- **Vite**
+- **Zod** (schema validation)
+- **React Hook Form**
+- **ESLint**
+- **PostCSS**
+- **date-fns**
+- **Vitest**
+- **npm**
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
+## 📂 Project Structure
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+community-insights-hub/
+├── src/
+│ ├── components/
+│ ├── pages/
+│ ├── hooks/
+│ ├── utils/
+│ └── main.tsx
+├── public/
+├── package.json
+├── tsconfig.json
+├── vite.config.ts
+└── README.md
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## ⚙️ Getting Started
 
-**Use GitHub Codespaces**
+### Prerequisites
+- **Node.js** (v18 or later)
+- **npm**
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Installation
 
-## What technologies are used for this project?
+```bash
+git clone https://github.com/laichouchi/community-insights-hub.git
+cd community-insights-hub
+npm install ```
 
-This project is built with:
+Run the App
+```bash
+npm run dev ```
+The app will be available at:
+👉 http://localhost:5173
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+📄 License
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+This project is licensed under the MIT License.
+Feel free to use, modify, and distribute it.
