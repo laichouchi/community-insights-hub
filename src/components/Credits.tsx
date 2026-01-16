@@ -49,6 +49,13 @@ const Credits = () => {
           ))}
         </div>
 
+        {/* School Attribution */}
+        <div className="text-center mb-8">
+          <p className="text-muted-foreground text-lg font-medium">
+            Oudni Omar High School
+          </p>
+        </div>
+
         {/* Made by RSN.Dev */}
         <div className="text-center">
           <a

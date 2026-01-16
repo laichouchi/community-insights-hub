@@ -51,17 +51,6 @@ const Navbar = () => {
             ))}
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
-            <Button
-              variant={isScrolled ? "default" : "hero-outline"}
-              size="sm"
-              className={!isScrolled ? "border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10" : ""}
-            >
-              Get Report
-            </Button>
-          </div>
-
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
