@@ -67,15 +67,6 @@ The Hub is built using a high-performance, modern stack:
     ```
     *The app will be available at `http://localhost:3000`*
 
----
-
-## 🎨 UI Preview
-
-> **Note:** Replace the placeholder below with a screenshot or GIF of your dashboard to showcase your work!
-
-![Dashboard Preview](https://via.placeholder.com/800x450.png?text=Community+Insights+Hub+Dashboard+Mockup)
-
----
 
 ## 🤝 Contributing
 
