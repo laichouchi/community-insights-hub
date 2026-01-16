@@ -13,6 +13,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ["Plus Jakarta Sans", "system-ui", "sans-serif"],
+        display: ["Fraunces", "Georgia", "serif"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -47,6 +51,18 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        organic: {
+          DEFAULT: "hsl(var(--organic))",
+          foreground: "hsl(var(--organic-foreground))",
+        },
+        packaging: {
+          DEFAULT: "hsl(var(--packaging))",
+          foreground: "hsl(var(--packaging-foreground))",
+        },
+        other: {
+          DEFAULT: "hsl(var(--other))",
+          foreground: "hsl(var(--other-foreground))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -62,6 +78,8 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+        "2xl": "1rem",
+        "3xl": "1.5rem",
       },
       keyframes: {
         "accordion-down": {
