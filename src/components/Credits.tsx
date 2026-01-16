@@ -1,11 +1,15 @@
-import { Users, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
+import ryanPfp from "@/assets/ryan.png";
+import nassim1Pfp from "@/assets/nassim1.png";
+import nassim2Pfp from "@/assets/nassim2.png";
+import sofianePfp from "@/assets/sofiane.png";
 
 const Credits = () => {
   const teamMembers = [
-    { name: "Team Member 1", role: "Research Lead" },
-    { name: "Team Member 2", role: "Data Analyst" },
-    { name: "Team Member 3", role: "Survey Coordinator" },
-    { name: "Team Member 4", role: "Community Outreach" },
+    { name: "Laichouchi Ryan", role: "C++ & Web Developer", image: ryanPfp },
+    { name: "Moussawoui Nassim", role: "Community Manager", image: nassim1Pfp },
+    { name: "Guechtouli Nassim", role: "Creative Developer", image: nassim2Pfp },
+    { name: "Bouricha Sofiane", role: "Security & Database Engineer", image: sofianePfp },
   ];
 
   return (
@@ -25,13 +29,17 @@ const Credits = () => {
 
         {/* Team Members */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto mb-16">
-          {teamMembers.map((member, index) => (
+          {teamMembers.map((member) => (
             <div
               key={member.name}
               className="group bg-card rounded-3xl p-6 shadow-soft hover:shadow-card transition-all duration-300 hover:-translate-y-1 text-center"
             >
-              <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
-                <Users className="w-7 h-7 text-primary group-hover:text-primary-foreground" />
+              <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4 ring-4 ring-primary/10 group-hover:ring-primary/30 transition-all duration-300">
+                <img 
+                  src={member.image} 
+                  alt={member.name}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <h3 className="font-display text-lg font-bold text-foreground mb-1">
                 {member.name}
