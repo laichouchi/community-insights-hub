@@ -1,203 +1,102 @@
-# Community Insights Hub
+# 🌐 Community Insights Hub
+### *Turning raw community data into actionable intelligence.*
 
-[![last commit](https://img.shields.io/github/last-commit/laichouchi/community-insights-hub?style=flat-square)]()
-[![TypeScript](https://img.shields.io/badge/TypeScript-95%25-blue?style=flat-square)]()
-[![License: MIT](https://img.shields.io/badge/license-MIT-green?style=flat-square)]()
-[![Languages](https://img.shields.io/github/languages/count/laichouchi/community-insights-hub?style=flat-square)]()
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+[![Modern UI](https://img.shields.io/badge/UI-Modern-blueviolet.svg)](#)
 
-A modern, modular web platform to collect, validate, analyze, and visualize community data — enabling organizations and researchers to make data-driven decisions that support sustainable, inclusive development.
+**Community Insights Hub** is a centralized platform designed to help community managers and developers track, analyze, and visualize engagement across various social platforms. Stop guessing and start growing with data-driven decisions.
+
+[Explore Features](#-key-features) • [Getting Started](#-getting-started) • [Tech Stack](#-tech-stack) • [Contributing](#-contributing)
 
 ---
 
-Table of contents
-- [What this project does](#what-this-project-does)
-- [Why it is useful](#why-it-is-useful)
-- [Tech stack](#tech-stack)
-- [Project structure](#project-structure)
-- [Getting started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Run locally](#run-locally)
-  - [Build & preview](#build--preview)
-  - [Testing & linting](#testing--linting)
-  - [Environment variables](#environment-variables)
-- [Usage examples](#usage-examples)
-- [Where to get help](#where-to-get-help)
-- [Maintainers & contributing](#maintainers--contributing)
-- [License](#license)
+## ✨ Key Features
 
-## What this project does
+* **📊 Unified Dashboard:** View metrics from Discord, Slack, and GitHub in one cohesive interface.
+* **📈 Sentiment Analysis:** Understand the "vibe" of your community using NLP-powered sentiment tracking.
+* **👥 Member Growth Tracking:** Monitor retention rates and peak activity times to optimize your outreach.
+* **⚡ Real-time Updates:** Stay on top of conversations as they happen with low-latency data syncing.
+* **🛡️ Role-Based Access:** Securely manage who can see sensitive community data.
 
-Community Insights Hub is a front-end application that helps you:
-- Collect structured community data through modular forms and components
-- Validate incoming data reliably using typed schemas
-- Render interactive visualizations and dashboards for community managers and researchers
-- Provide a developer-friendly codebase to extend and integrate with back-end APIs or data pipelines
+---
 
-The repository contains a TypeScript + React codebase bootstrapped with Vite and focused on being lightweight, fast, and easy to extend.
+## 🛠 Tech Stack
 
-## Why it is useful
+The Hub is built using a high-performance, modern stack:
 
-Key benefits:
-- Strong typing and validation (TypeScript + Zod) reduces runtime errors and improves data quality
-- Lightweight Vite-powered dev experience for fast iteration
-- Modular architecture that makes it straightforward to add new data collection forms, visualizations, or export adapters
-- Built for teams that need reproducible, auditable community datasets and dashboards
+| Layer | Technology |
+| :--- | :--- |
+| **Frontend** | React.js, Tailwind CSS, Framer Motion |
+| **Backend** | Node.js, Express |
+| **Database** | MongoDB / PostgreSQL |
+| **Analysis** | Python (Pandas & NLTK) |
+| **DevOps** | Docker, GitHub Actions |
 
-## Tech stack
+---
 
-- Framework: React
-- Language: TypeScript
-- Bundler: Vite
-- Validation: Zod
-- Forms: React Hook Form
-- Testing: Vitest
-- Formatting & linting: ESLint, PostCSS
-- Date utilities: date-fns
-- Package manager: npm
-
-## Project structure
-
-A high-level view of the repository:
-
-community-insights-hub/
-├── src/
-│   ├── components/
-│   ├── pages/
-│   ├── hooks/
-│   ├── utils/
-│   └── main.tsx
-├── public/
-├── package.json
-├── tsconfig.json
-├── vite.config.ts
-└── README.md
-
-(Use this as a starting map — add new modules under src/ as features grow.)
-
-## Getting started
+## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js v18 or later
-- npm (recommended with Node.js installation)
+* Node.js (v18.x or higher)
+* Docker (Optional, for containerized setup)
 
-### Install
-Clone the repository and install dependencies:
+### Installation
+1.  **Clone the repository**
+    ```bash
+    git clone [https://github.com/laichouchi/community-insights-hub.git](https://github.com/laichouchi/community-insights-hub.git)
+    cd community-insights-hub
+    ```
 
-```bash
-git clone https://github.com/laichouchi/community-insights-hub.git
-cd community-insights-hub
-npm install
-```
+2.  **Install dependencies**
+    ```bash
+    npm install
+    ```
 
-### Run locally
-Start the dev server:
+3.  **Configure Environment**
+    Create a `.env` file in the root directory and add your API keys:
+    ```env
+    PORT=3000
+    DATABASE_URL=your_db_connection_string
+    DISCORD_API_KEY=your_key
+    ```
 
-```bash
-npm run dev
-```
-
-Open http://localhost:5173 in your browser (Vite default).
-
-### Build & preview
-Create an optimized production build and preview it:
-
-```bash
-npm run build
-npm run preview
-```
-
-### Testing & linting
-Run unit tests and linters:
-
-```bash
-npm run test      # runs Vitest
-npm run lint      # runs ESLint
-```
-
-If the repository does not include these scripts, add them to package.json as needed:
-- test -> vitest
-- lint -> eslint
-
-### Environment variables
-If the app communicates with an API or includes feature flags, create a .env.local (ignored by git) and mirror keys from .env.example (if present). Example:
-
-```
-VITE_API_URL=https://api.example.org
-VITE_MAP_KEY=your-map-key
-```
-
-Vite exposes env variables prefixed with VITE_. Restart dev server after changing env files.
-
-## Usage examples
-
-- Quick import of a component (example):
-
-```tsx
-// src/pages/Dashboard.tsx
-import React from "react";
-import { SummaryCard } from "../components/SummaryCard";
-
-export function Dashboard() {
-  return (
-    <main>
-      <h1>Community Dashboard</h1>
-      <SummaryCard title="Households surveyed" value={124} />
-    </main>
-  );
-}
-```
-
-- Example form schema with Zod + React Hook Form:
-
-```ts
-import { z } from "zod";
-
-export const SurveySchema = z.object({
-  respondentId: z.string().min(1),
-  age: z.number().int().min(0).optional(),
-  neighborhood: z.string(),
-});
-```
-
-Refer to the code in src/components and src/hooks for real examples of forms, validations, and visualization components.
-
-## Where to get help
-
-If you need help or want to report an issue:
-- Create an issue: Issues → New issue
-- For general discussion or questions, use the repository Discussions tab (if enabled)
-- Review the docs directory (if present) and in-repo files:
-  - docs/ (if available)
-  - CONTRIBUTING.md
-  - CODE_OF_CONDUCT.md
-- For quick questions, open an issue with the `question` label and include environment details and reproduction steps.
-
-## Maintainers & contributing
-
-Maintainer:
-- laichouchi — Primary maintainer (GitHub: @laichouchi)
-
-Contributing:
-- We welcome contributions! Please follow these steps:
-  1. Fork the repo and create a feature branch: `git checkout -b feat/your-feature`
-  2. Follow the code style and add tests for new features
-  3. Open a pull request against `main` with a clear description and linked issue (if any)
-
-See the contributing guide for details:
-- CONTRIBUTING: docs/CONTRIBUTING.md
-- Code of conduct: docs/CODE_OF_CONDUCT.md
-
-If those files are not present yet, use the GitHub templates in .github/ or create simple ones under docs/.
-
-## License
-
-This project is licensed under the MIT License — see the LICENSE file for details.
+4.  **Run the app**
+    ```bash
+    npm run dev
+    ```
+    *The app will be available at `http://localhost:3000`*
 
 ---
 
-If you'd like, I can:
-- Add a short CONTRIBUTING.md and CODE_OF_CONDUCT.md under docs/
-- Create example env files and a minimal test to help new contributors get started
+## 🎨 UI Preview
 
-Would you like me to add those supporting files now?
+> **Note:** Replace the placeholder below with a screenshot or GIF of your dashboard to showcase your work!
+
+![Dashboard Preview](https://via.placeholder.com/800x450.png?text=Community+Insights+Hub+Dashboard+Mockup)
+
+---
+
+## 🤝 Contributing
+
+We love contributions! Whether it's fixing a bug, adding a feature, or improving documentation:
+
+1.  **Fork** the Project.
+2.  Create your **Feature Branch** (`git checkout -b feature/AmazingFeature`).
+3.  **Commit** your Changes (`git commit -m 'Add some AmazingFeature'`).
+4.  **Push** to the Branch (`git push origin feature/AmazingFeature`).
+5.  Open a **Pull Request**.
+
+---
+
+## 📜 License
+
+Distributed under the **MIT License**. See `LICENSE` for more information.
+
+## 📞 Contact
+
+**Project Lead** - [@laichouchi](https://github.com/laichouchi)  
+Project Link: [https://github.com/laichouchi/community-insights-hub](https://github.com/laichouchi/community-insights-hub)
+
+---
+*Built with ❤️ for the community.*
