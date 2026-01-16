@@ -4,7 +4,7 @@ import WasteComposition from "@/components/WasteComposition";
 import Demographics from "@/components/Demographics";
 import BehavioralInsights from "@/components/BehavioralInsights";
 import Recommendations from "@/components/Recommendations";
-import CallToAction from "@/components/CallToAction";
+import Credits from "@/components/Credits";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -25,7 +25,7 @@ const Index = () => {
         <section id="recommendations">
           <Recommendations />
         </section>
-        <CallToAction />
+        <Credits />
       </main>
       <Footer />
     </div>
